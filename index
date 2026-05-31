@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brandon Blagg</title>
+
+  <style>
+    :root {
+      --bg: #101418;
+      --panel: rgba(255,255,255,.07);
+      --line: rgba(255,255,255,.13);
+      --text: #ffffff;
+      --muted: #b8c8c1;
+      --accent: #f4d35e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(244,211,94,.10), transparent 34rem),
+        linear-gradient(145deg, #0f1216, #161b20);
+      color: var(--text);
+      padding: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    main {
+      width: min(720px, 100%);
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 32px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)),
+        rgba(20,24,28,.84);
+      box-shadow: 0 24px 70px rgba(0,0,0,.38);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 8vw, 72px);
+      line-height: .9;
+      letter-spacing: -.06em;
+    }
+
+    .subtitle {
+      margin: 14px 0 28px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.55;
+      max-width: 560px;
+    }
+
+    .project {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      background: var(--panel);
+      transition: transform .12s ease, border-color .12s ease, background .12s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-2px);
+      border-color: rgba(244,211,94,.45);
+      background: rgba(244,211,94,.08);
+    }
+
+    .project-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: -.03em;
+    }
+
+    .badge {
+      color: #17150d;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .project p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 15px;
+    }
+
+    footer {
+      margin-top: 18px;
+      color: rgba(184,200,193,.7);
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <section class="card">
+      <h1>Brandon Blagg</h1>
+
+      <p class="subtitle">
+        Personal projects, games, and experiments.
+      </p>
+
+      <a class="project" href="/Entropy/">
+        <div class="project-title">
+          <span>Entropy</span>
+          <span class="badge">Play</span>
+        </div>
+
+        <p>
+          A solo abstract strategy card game built around chess-like movement,
+          daily shuffles, and minimizing entropy.
+        </p>
+      </a>
+    </section>
+
+    <footer>
+      © 2026 Brandon Blagg. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>
